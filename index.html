@@ -5,7 +5,7 @@
      <meta charset="UTF-8">
      <meta name="viewport" content="width=device-width, initial-scale=1.0">
      <title>Portfolio-Emily-Fruetel</title>
-     <link href="css/style.css" type="text/css" rel="stylesheet">
+     <link href="style.css" type="text/css" rel="stylesheet">
      <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
      <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=PT+Sans&display=swap" rel="stylesheet">
@@ -30,6 +30,32 @@
         <div class="bio">
             <p>I’m a dedicated UX designer who is passionate about creating impactful online experiences. With my background in psychology and education, I bring a human-centered approach to every UX project. My empathy-driven research allows me to understand users’ needs and create intuitive solutions. I enjoy collaborating with a team to find a balance between functionality and delight in designs. Let’s connect and create exceptional experiences together!</p>
         </div>
+        <button class="floatingButton">
+            Contact me!
+        </button>
+    
+        <div class="modal">
+            <div class="modalContent">
+                <div class="cancel">
+                    <i class="fa fa-times-circle"></i>
+                </div>
+                <div id="modalTitle1">
+                    I'm always looking for the next project to pursue!
+                </div>
+                <div id="modalTitle2">
+                    Contact me for full-time work, contract work, or freelance opportunities.
+                </div>
+                <div class="boxSection">
+                    <div id="userInfo">
+                        <input type="text" placeholder="Name" id="nameBox" name="nameBox"><br><br>
+                        <input type="text" placeholder="Email" id="emailBox" name="emailBox"><br><br>
+                    </div>
+                    <textarea id="messageBox" name="messageBox">Type Message Here...</textarea>
+                </div>
+                <button id="sendButton">Send</button>
+            </div>     
+        </div>
+
     </header>
 
     <section class="myWork">
@@ -69,10 +95,7 @@
 
     <footer>
         <div class="CTA">
-            <div id="ctaContent">
-                <h3>I’m always looking for the next project to pursue!</h3>
-                  <p>Contact me for full-time work, contract work, or freelance opportunities</p>
-            </div>
+            <h3>Check out my social media!</h3>
             <div class="icons">
                 <i class="material-icons">mail</i>
                 <i class="fa fa-linkedin"></i>
@@ -81,5 +104,6 @@
         </div>
     </footer>
 </body>
-
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+<script src="js/index.js"></script>
 </html>

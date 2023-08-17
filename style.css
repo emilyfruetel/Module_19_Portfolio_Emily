@@ -19,8 +19,8 @@ header {
 
 #logo {
     grid-area: nav;
-    width: 60px;
-    height: 50px;
+    width: 80px;
+    height: 70px;
     padding: 0px 20px;
 }
 
@@ -79,12 +79,12 @@ p {
 
 .bio {
     grid-area: bio;
-    float: center;
+    display: flex;
+    justify-self: center;
+    position: relative;
     width: 50%;
     background-color:#FDECEF;
     border-radius: 25px;
-    position: relative;
-    left: 240px;
     color:#0F110C;
     font-family: 'PT Sans';
     font-size:20px;
@@ -95,6 +95,149 @@ p {
     text-align: center;
 }
 
+.floatingButton {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  right: 50px;
+  bottom: 25px;
+  position: fixed;
+  background-color: #612940;
+  color:#FDECEF;
+  font-size: 20px;
+  font-family: 'Fira Sans';
+  text-align: center;
+  border-radius: 100px;
+  width: 100px;
+  height: 100px;
+  box-shadow: 5px 3px 3px #312d2d;
+  z-index: 1;
+}
+
+.modal {
+  visibility: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-self: center;
+  position: fixed;
+  width: 60%;
+  background-color:#612940;
+  border-radius: 25px;
+  padding: 30px;
+  margin-top: 65px;
+  z-index: 1;
+}
+
+.modal.active {
+  visibility: visible;
+}
+
+.modalContent {
+  visibility: hidden;
+}
+
+.modalContent.active {
+  visibility: visible;
+}
+
+.cancel {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  color:#FDECEF;
+  font-size: 25px;
+}
+
+#modalTitle1 {
+  font-family: "Istok Web";
+  font-size: 30px;
+  color:#FDECEF;
+  padding: 8px;
+  text-align: center;
+
+}
+
+#modalTitle2 {
+  text-align: center;
+  font-family: "PT Sans";
+  color:#FDECEF;
+  font-size: 20px;
+  padding: 8px;
+}
+
+.boxSection {
+  align-items: center;
+  width: 100%;
+  display: grid;
+  grid-template-rows: 1fr;
+  grid-template-columns: 1fr;
+  grid-template-areas: 
+  "nameBox emailBox"
+  "messageBox messageBox";
+}
+
+#userInfo {
+  display: flex;
+  flex-direction: row;
+}
+
+#nameBox {
+  grid-area: nameBox;
+  background-color:#FDECEF;
+  border-radius: 10px;
+  height: 30px;
+  width: 50%;
+  margin-left: 76px;
+  margin-right: 10px;
+  margin-top: 5px;
+  margin-bottom: 15px;
+}
+
+#emailBox{
+  grid-area: emailBox;
+  background-color:#FDECEF;
+  border-radius: 10px;
+  height: 30px;
+  width: 50%;
+  margin-right: 76px;
+  margin-top: 5px;
+  margin-bottom: 15px;
+}
+
+#messageBox {
+  grid-area: messageBox;
+  background-color:#FDECEF;
+  border-radius: 10px;
+  border-color: black;
+  text-align: flex-start;
+  margin-left: 76px;
+  height: 100px;
+  width: 80%
+}
+
+#sendButton {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+  background-color:#FDECEF;
+  font-family: "Istok Web";
+  font-size: 20px;
+  width: 200px;
+  height: 60px;
+  color:#612940;
+  border-radius: 25px;
+  margin-top: 20px;
+}
+
+.myWork {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-self: center;
+  position: relative;
+}
 
 .project1 {
     display: grid;
@@ -106,7 +249,6 @@ p {
     height: 550px;
     border-radius: 25px;
     margin: 64px;
-    margin-left: 110px;
 }
 
 #ftImg {
@@ -157,8 +299,6 @@ p {
     width: 1050px;
     height: 550px;
     border-radius: 25px;
-    margin: 64px;
-    margin-left: 110px;
 }
 
 #dolContent {
@@ -217,7 +357,6 @@ p {
     height: 550px;
     border-radius: 25px;
     margin: 64px;
-    margin-left: 110px;
 }
 
 #ndbhImg {
@@ -278,7 +417,7 @@ footer {
 
 h3 {
     font-family: "Istok Web";
-    font-size: 40px;
+    font-size: 25px;
     font-weight: normal;
     color: #0F110C
 }
@@ -296,20 +435,23 @@ h3 {
 
 .icons {
     color:#612940;
-    align-items: center;
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    justify-content: center;
 }
 
 .material-icons {
-    font-size: 25px !important;
+    font-size: 38px !important;
 }
 
 .fa-linkedin {
-    font-size: 25px !important;
+    font-size: 35px !important;
     padding-left: 30px;
 }
 
 .fa-instagram {
-    font-size: 25px !important;
+    font-size: 35px !important;
     padding-left: 30px;
 }
 
@@ -354,6 +496,12 @@ h3 {
     width: auto;
     margin-bottom: 20px;
     text-align: center;
+  }
+
+  .modal.active {
+    display: flex;
+    flex-direction: column;
+    width: 75%;
   }
 
   .project1{
